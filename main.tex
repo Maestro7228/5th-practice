@@ -1,0 +1,42 @@
+\documentclass[a4paper,11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+\title{Практическая работа №5}
+\author{Студент группы 8871 Ковлягин В.В.}
+
+\begin{document}
+\begin{table}
+\caption{\label{TRT5} {Практическая работа №5: Карты Карно для $\bar{A}C+BA\bar{C}\bar{D}+BD\bar{A}$}}
+\begin{center}
+\rotatebox{90}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+  \multicolumn{4}{|c|}{Аргументы} & \multicolumn{11}{|c|}{Логические операции}\\
+  \hline
+  \multirow{2}{*}{A} & \multirow{2}{*}{B} & \multirow{2}{*}{C} & \multirow{2}{*}{D} & \multicolumn{3}{|C|}{Отрицание} & \multicolumn{6}{|C|}{Конъюнкция} & \multicolumn{2}{|C|}{Дизъюнкция}\\
+  &&&& $\bar{A} & \bar{C} & \bar{D}$ & \bar{A}\land C & B\land A & (B\land A)\land\bar{C} & ((B\land A)\land\bar{C})\land\bar{D}& B\land D & (B\land D)\land\bar{A} & (\bar{A}\land C)\vee(B\land A\land\bar{C}\land\bar{D} & Полное выражение\\
+  0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+  0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+  0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+  0 & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+  0 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+  0 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1\\
+  0 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+  0 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
+  1 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+  1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+  1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+  1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+  1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 1\\
+  1 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 0\\
+  1 & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+  1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0\\
+  \hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+\end{document}
