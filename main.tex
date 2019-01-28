@@ -3,14 +3,17 @@
 \usepackage[english, russian]{babel}
 \usepackage{multirow}
 \usepackage{graphicx}
-\pagestyle{empty}
+\usepackage{makecell}
+\usepackage{diagbox}
+\usepackage[left=2cm,right=2cm,
+    top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
 
 \title{Практическая работа №5}
 \author{Студент группы 8871 Ковлягин В.В.}
 
 \begin{document}
 \begin{table}
-\caption{\label{TRT5} {Практическая работа №5: Карты Карно для $\bar{A}C+BA\bar{C}\bar{D}+BD\bar{A}$}}
+\caption{\label{TRT5} {Практическая работа №5: Таблица истинности для $\bar{A}C+BA\bar{C}\bar{D}+BD\bar{A}$}}
 \begin{center}
 \rotatebox{90}{
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -39,5 +42,28 @@
 \end{tabular}}
 \end{center}
 \end{table}
-
+\newpage
+\begin{table}
+\caption{\label{TRT5} {Практическая работа №5: Карта Карно для $\bar{A}C+BA\bar{C}\bar{D}+BD\bar{A}$}}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+         \diaghead{\theadfont Diagonalhead}
+{AB}{СD}&00&01&10&11 \\
+         \hline
+         00&0&0&1&1\\
+         \hline
+         01&0&1&1&1\\
+         \hline
+         10&0&0&0&0\\
+         \hline
+         11&1&0&0&0\\
+         \hline
+    \end{tabular}
+\end{table}
+СДНФ функции:\\
+$F=\bar{A}\bar{B}C\bar{D}+\bar{A}\bar{B}CD+\bar{A}B\bar{C}D+\bar{A}BC\bar{D}+\bar{A}BCD+AB\bar{C}\bar{D}\\$
+\\
+СКНФ функции:\\
+$F=(\bar{A}+\bar{B}+\bar{C}+\bar{D})(\bar{A}+\bar{B}+\bar{C}+D)(\bar{A}+B+\bar{C}+\bar{D})(A+\bar{B}+\bar{C}+\bar{D})(A+\bar{B}+\bar{C}+D)(A+\bar{B}+C+\bar{D})(A+\bar{B}+C+D)(A+B+\bar{C}+D)(A+B+C+\bar{D})(A+B+C+D)$
 \end{document}
