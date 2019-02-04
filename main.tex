@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{makecell}
 \usepackage{diagbox}
+\usepackage{tikz}
 \usepackage[left=2cm,right=2cm,
     top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
 
@@ -43,27 +44,32 @@
 \end{center}
 \end{table}
 \newpage
-\begin{table}
-\caption{\label{TRT5} {Практическая работа №5: Карта Карно для $\bar{A}C+BA\bar{C}\bar{D}+BD\bar{A}$}}
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-    \hline
-         \diaghead{\theadfont Diagonalhead}
-{AB}{СD}&00&01&10&11 \\
-         \hline
-         00&0&0&1&1\\
-         \hline
-         01&0&1&1&1\\
-         \hline
-         10&0&0&0&0\\
-         \hline
-         11&1&0&0&0\\
-         \hline
-    \end{tabular}
-\end{table}
 СДНФ функции:\\
 $F=\bar{A}\bar{B}C\bar{D}+\bar{A}\bar{B}CD+\bar{A}B\bar{C}D+\bar{A}BC\bar{D}+\bar{A}BCD+AB\bar{C}\bar{D}\\$
+\begin{tikzpicture}
+\draw (0,0) rectangle (1,1) rectangle (2,0)
+(0,1) rectangle (1,2) rectangle (2,1) rectangle (3,0) rectangle (4,1) rectangle (3,2) rectangle (2,1)
+(0,2) rectangle (1,3) rectangle (0,4)
+(1,4) rectangle (2,3) rectangle (3,4) rectangle (4,3) rectangle (3,2) rectangle (2,3) rectangle (1,3)
+(2,4.8) -- (4,4.8) node[right] {$C$}
+(-0.8,2) -- (-0.8,0) node[below] {$ A$}
+(-0.4,3) -- (-0.4,1) node[below] {$B$}
+(1,4.4) -- (3,4.4) node[right] {$ D$};
+\draw (0.5,0.5)  node {8} (1.5,0.5) node {9} (2.5,0.5) node {11} (0.5,1.5) node {\textcolor{red}1\textcolor{red}2} (1.5,2.5) node {\textcolor{red} 5} (2.5,3.5) node {\textcolor{red} 3} (3.5,0.5) node {10} (1.5,1.5) node {13} (2.5,1.5) node {15} (3.5,1.5) node {14} (0.5,2.5) node {4} (0.5,3.5) node {0} (1.5,3.5) node {1} (2.5,2.5) node {\textcolor{red} 7} (3.5,2.5) node {\textcolor{red} 6} (3.5,3.5) node {\textcolor{red} 2};
+\end{tikzpicture}
 \\
 СКНФ функции:\\
-$F=(\bar{A}+\bar{B}+\bar{C}+\bar{D})(\bar{A}+\bar{B}+\bar{C}+D)(\bar{A}+B+\bar{C}+\bar{D})(A+\bar{B}+\bar{C}+\bar{D})(A+\bar{B}+\bar{C}+D)(A+\bar{B}+C+\bar{D})(A+\bar{B}+C+D)(A+B+\bar{C}+D)(A+B+C+\bar{D})(A+B+C+D)$
+$F=(\bar{A}+\bar{B}+\bar{C}+\bar{D})(\bar{A}+\bar{B}+\bar{C}+D)(\bar{A}+B+\bar{C}+\bar{D})(A+\bar{B}+\bar{C}+\bar{D})(A+\bar{B}+\bar{C}+D)(A+\bar{B}+C+\bar{D})(A+\bar{B}+C+D)(A+B+\bar{C}+D)(A+B+C+\bar{D})(A+B+C+D)$\\
+\begin{tikzpicture}
+\draw (0,0) rectangle (1,1) rectangle (2,0)
+(0,1) rectangle (1,2) rectangle (2,1) rectangle (3,0) rectangle (4,1) rectangle (3,2) rectangle (2,1)
+(0,2) rectangle (1,3) rectangle (0,4)
+(1,4) rectangle (2,3) rectangle (3,4) rectangle (4,3) rectangle (3,2) rectangle (2,3) rectangle (1,3)
+(2,4.8) -- (4,4.8) node[right] {$C$}
+(-0.8,2) -- (-0.8,0) node[below] {$ A$}
+(-0.4,3) -- (-0.4,1) node[below] {$B$}
+(1,4.4) -- (3,4.4) node[right] {$ D$};
+
+\draw (0.5,0.5)  node {\textcolor{red}8} (1.5,0.5) node {\textcolor{red}9} (2.5,0.5) node {\textcolor{red}1\textcolor{red}1} (0.5,1.5) node {12} (1.5,2.5) node {5} (2.5,3.5) node {3} (3.5,0.5) node {\textcolor{red}1\textcolor{red}0} (1.5,1.5) node {\textcolor{red}1\textcolor{red}3} (2.5,1.5) node {\textcolor{red}1\textcolor{red}5} (3.5,1.5) node {\textcolor{red}1\textcolor{red}4} (0.5,2.5) node {\textcolor{red}4} (0.5,3.5) node {\textcolor{red}0} (1.5,3.5) node {\textcolor{red}1} (2.5,2.5) node {7} (3.5,2.5) node {6} (3.5,3.5) node {2};
+\end{tikzpicture}
 \end{document}
